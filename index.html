@@ -58,7 +58,10 @@
         analytics.identify(12345, {
             email: email, 
             name: fullname
-        });
+        }, {'integrations': {
+		'Salesforce': true
+	   }
+	   });
         analytics.track('destination submitted', user, function() {
             window.location.href = "";
         });
