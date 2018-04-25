@@ -58,23 +58,16 @@
         analytics.identify(12345, {
             email: email, 
             name: fullname
-        }, {'integrations': {
-		'Salesforce': true
+        }, {
+		'integrations': {
+			'Salesforce': true
+		 }
 	   }
-	   });
+	);
         analytics.track('destination submitted', user, function() {
             window.location.href = "";
         });
       }
-	    analytics.identify('nstark', {
-	    'email': 'nstark@hasbro.com',
-	    'title': 'Former King',
-		    'name': 'Ned Stark',
-		    'rating': 'Cold'}, {
-		    'integrations': {
-			'Salesforce': true
-		    }
-	    });
 </script>
 </body> 
 </html>
