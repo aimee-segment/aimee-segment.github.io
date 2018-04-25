@@ -55,7 +55,8 @@
             destination: destination, 
             details: details
         };
-        analytics.identify(12345, {
+        
+	analytics.identify(12345, {
             email: email, 
             name: fullname
         }, {
@@ -64,7 +65,27 @@
 		 }
 	   }
 	);
-        analytics.track('destination submitted', user, function() {
+	
+	analytics.group('820', {
+	    'name': 'Hasbro Industries',
+	    'address': {
+	        'city': 'New York',
+		'state': 'NY',
+		'country': 'US',
+		'postalCode': '02221',
+		'street': '1200 Broadway Ave'
+	    },
+	    'phone': '555-122-1233',
+            'employees': 12000,
+            'website': 'http://www.hasbro.com'
+	}, {
+		'integrations': {
+			'Salesforce': true
+		}
+	   }
+	);
+	      
+        analytics.track('Destination Submitted', user, function() {
             window.location.href = "";
         });
       }
