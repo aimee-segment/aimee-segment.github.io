@@ -41,7 +41,8 @@
     <br><br>
     <input name="submit" class="button button-small" type="submit" value="submit"/>
     <br><br>
-    <input name="button" class="button button-small" type="button" value="button"/>
+    <button class="button button-small" onclick="myFunction()">Click me</button>
+
 </form> 
     <script type="text/javascript">
       function identify(e){
@@ -93,6 +94,20 @@
         analytics.track('Destination Submitted', user, function() {
             window.location.href = "";
         });
+	      
+	function myFunction() {
+    		analytics.track('Button Clicked', {
+			title: "Tester"
+		}, {
+			integrations: {
+				'All': false,
+				'Klaviyo': true,
+				'AutopilotHQ': false,
+				'Salesforce': false,
+				'Quora Conversion Pixel': true
+			}
+	});
+	}
       }
 </script>
 </body> 
