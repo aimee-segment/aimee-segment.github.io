@@ -44,7 +44,7 @@
     <button class="button button-small" onclick="myFunction()">Click me</button>
 
 </form> 
-    <script type="text/javascript">
+<script type="text/javascript">
       function identify(e){
         e.preventDefault();
         var form = e.target;
@@ -59,56 +59,56 @@
             details: details
         };
         
-	analytics.identify(1233456, {
-            email: email, 
-            name: fullname
-        }, {
-		'integrations': {
-			'Salesforce': true,
-			'Klaviyo': true {
-		          listId: 'Pgq9Gu'
-		         }
-		 }
-	   }
-	);
+        analytics.identify(1233456, {
+                email: email, 
+                name: fullname
+            }, {
+            'integrations': {
+                'Salesforce': true,
+                'Klaviyo': true {
+                      listId: 'Pgq9Gu'
+                     }
+             }
+           }
+        );
 	
-	analytics.group('820', {
-	    name: 'Hasbro Industries',
-	    address: {
-	        city: 'New York',
-		state: 'NY',
-		country: 'US',
-		postalCode: '02222',
-		street: '1202 Broadway Ave'
-	    },
-	    phone: '555-122-2000',
-            employees: 12000,
-            website: 'http://www.hasbro.com'
-	}, {
-		'integrations': {
-			'Salesforce': true
-		}
-	   }
-	);
+        analytics.group('820', {
+            name: 'Hasbro Industries',
+            address: {
+                city: 'New York',
+            state: 'NY',
+            country: 'US',
+            postalCode: '02222',
+            street: '1202 Broadway Ave'
+            },
+            phone: '555-122-2000',
+                employees: 12000,
+                website: 'http://www.hasbro.com'
+        }, {
+            'integrations': {
+                'Salesforce': true
+            }
+           }
+        );
 	      
         analytics.track('Destination Submitted', user, function() {
             window.location.href = "";
         });
-	      
-	function myFunction() {
-    		analytics.track('Button Clicked', {
-			title: "Tester"
-		}, {
-			integrations: {
-				'All': false,
-				'Klaviyo': true,
-				'AutopilotHQ': false,
-				'Salesforce': false,
-				'Quora Conversion Pixel': true
-			}
-	});
-	}
       }
+    
+	   function myFunction() {
+           analytics.track('Button Clicked', {
+               title: "Tester"
+           }, {
+               integrations: {
+                   'All': false,
+                   'Klaviyo': true,
+                   'AutopilotHQ': false,
+                   'Salesforce': false,
+                   'Quora Conversion Pixel': true
+               }
+	       });
+	   }
 </script>
 </body> 
 </html>
