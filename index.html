@@ -69,6 +69,12 @@
                     }
                   }
                 );
+		var _learnq = _learnq || [];    
+		analytics.on('identify', function(event, properties, options) {
+			_learnq.push(['identify', {
+				'$email' : email,
+ 			 }]);
+		});
                 
                 analytics.group('820', {
                     name: 'Hasbro Industries',
