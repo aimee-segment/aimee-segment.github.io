@@ -69,12 +69,6 @@
                     }
                   }
                 );
-		var _learnq = _learnq || [];    
-		analytics.on('identify', function(event, properties, options) {
-			_learnq.push(['identify', {
-				'$email' : email,
- 			 }]);
-		});
                 
                 analytics.group('820', {
                     name: 'Hasbro Industries',
@@ -101,18 +95,27 @@
             }
     
 	       function myFunction() {
-               analytics.track('Button Clicked', {
-                   title: "Tester"
-               }, {
-                   integrations: {
-                       'All': false,
-                       'Klaviyo': true,
-                       'AutopilotHQ': false,
-                       'Salesforce': false,
-                       'Quora Conversion Pixel': true
-                   }
-               });
-           }
+		       analytics.track('Button Clicked', {
+			   title: "Tester"
+		       }, {
+			   integrations: {
+			       'All': false,
+			       'Klaviyo': true,
+			       'AutopilotHQ': false,
+			       'Salesforce': false,
+			       'Quora Conversion Pixel': true
+			   }
+		       });
+		       
+		        var apiKey = "hfWBjc";
+		        var xhttp = new XMLHttpRequest();
+    			xhttp.open("POST", "https://a.klaviyo.com/api/v1/list/Pgq9Gu/members", true);
+    			xhttp.setRequestHeader("Content-type", "application/json");
+    			xhttp.send();
+    			var response = JSON.parse(xhttp.responseText);
+		       console.log(response);
+		       
+           	}
 </script>
 </body> 
 </html>
