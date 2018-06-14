@@ -107,13 +107,23 @@
 			   }
 		       });
 		       
-		        var apiKey = "hfWBjc";
-		        var xhttp = new XMLHttpRequest();
-    			xhttp.open("POST", "https://a.klaviyo.com/api/v1/list/Pgq9Gu/members", true);
-    			xhttp.setRequestHeader("Content-type", "application/json");
-    			xhttp.send();
-    			var response = JSON.parse(xhttp.responseText);
-		       console.log(response);
+		        //var apiKey = "hfWBjc";
+		        //var xhttp = new XMLHttpRequest();
+    			//xhttp.open("POST", "https://a.klaviyo.com/api/v1/list/Pgq9Gu/members", true);
+    			//xhttp.setRequestHeader("Content-type", "application/json");
+    			//xhttp.send();
+    			//var response = JSON.parse(xhttp.responseText);
+		        //console.log(response);
+
+		       analytics.on('track', function(event, properties, options) {
+			       var _learnq = _learnq || [];
+				_learnq.push(['account', 'hfWBjc']);
+			       _learnq.push(['identify', {
+    				// Change the line below to dynamically print the user's email.
+    				'$email' : 'jwow@gmail.com'
+  			}]);
+
+});
 		       
            	}
 </script>
