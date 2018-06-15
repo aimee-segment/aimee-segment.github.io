@@ -47,76 +47,54 @@
                     <br><br>
                     <button class="button button-small" onclick="myFunction()">Click me</button>
                 </form>
+		<br><br>
+                <button class="button button-small" onclick="myFunction2()">Track</button>
             </div>
         </div>
-        <script type="text/javascript">
-            function identify(e){
-                e.preventDefault();
-                var form = e.target;
-                var email = form["email"].value;
-                var fullname = form["fullname"].value;
-                var destination = form["destination"].value;
-                var details = form["details"].value;
-                var user = {
-                    email: email,
-                    name: fullname,
-                    destination: destination,
-                    details: details
-                };
-                
-                analytics.identify(1233456, {
-                    email: email, 
-                    name: fullname
-                }, {
-                    'integrations': {
-                        'Salesforce': true,
-                        'Klaviyo': true
-                    }
-                  }
-                );
-                
-                analytics.group('820', {
-                    name: 'Hasbro Industries',
-                    address: {
-                        city: 'New York',
-                    state: 'NY',
-                    country: 'US',
-                    postalCode: '02222',
-                    street: '1202 Broadway Ave'
-                    },
-                    phone: '555-122-2000',
-                        employees: 12000,
-                        website: 'http://www.hasbro.com'
-                }, {
-                    'integrations': {
-                        'Salesforce': true
-                    }
-                  }
-                );
-                
-                analytics.track('Destination Submitted', user, function() {
-                    window.location.href = "";
-                });
-            }
+	<script type="text/javascript">
+    		function identify(e){
+        		e.preventDefault();
+        		var form = e.target;
+        		var email = form["email"].value;
+        		var fullname = form["fullname"].value;
+        		var destination = form["destination"].value;
+        		var details = form["details"].value;
+        		var user = {
+            			email: email,
+            			name: fullname,
+            			destination: destination,
+            			details: details
+        		};
+
+        		analytics.identify(1233456, {
+            			email: email, 
+            			name: fullname
+        		}, {
+            			'integrations': {
+                		'Salesforce': true,
+                		'Klaviyo': true
+            			}
+			});
+
+        		analytics.track('Destination Submitted', user, function() {
+            			window.location.href = "";
+        		});
+    		}
     
-	       function myFunction() {
-		       analytics.track('Button Clicked', {
-			   title: "Tester"
-		       }, {
-			   integrations: {
-			       'All': false,
-			       'Klaviyo': true,
-			       'AutopilotHQ': false,
-			       'Salesforce': false,
-			       'Quora Conversion Pixel': true
-			   }
-		       });
-		       
-
-
-});
-		       
-           	}
-</script>
+    		function myFunction() {
+        		analytics.track('Button Clicked', {
+            			title: "Tester"
+        		}
+    		});
+	    
+    		function myFunction2() {
+        		analytics.track('Submit', {
+            			name: "Aimee Menne",
+       			 	email: "amenne@gmail.com",
+        			age: 33,
+        			gender: "female"
+        		}
+    		});
+	</script>   
 </body> 
 </html>
