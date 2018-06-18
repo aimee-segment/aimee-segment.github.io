@@ -57,7 +57,7 @@
                     	<br><br>
                 	<input name="submit" class="button button-small" type="submit" value="submit"/>
 		</form>
-		    <button class="button button-small" onclick="myFunction2()">Track</button>
+		    <button class="button button-small" onclick="myFunction2()">Identify People</button>
             </div>
         </div>
 	<script type="text/javascript">
@@ -120,12 +120,79 @@
 		}
 		
     		function myFunction2() {
-        		analytics.track('Submit', {
-            			name: "Aimee Menne",
-       			 	email: "amenne@gmail.com",
-        			age: 33,
-        			gender: "female"
-    			});
+        		
+			analytics.identify(123, {
+            			firstName: "Jason", 
+				gender: "m",
+				age: 21
+			});
+			
+			analytics.identify(124, {
+            			firstName: "Martin", 
+				gender: "m",
+				age: 22
+			});
+			
+			analytics.identify(125, {
+            			firstName: "Craig", 
+				gender: "m",
+				age: 43
+			});
+			
+			analytics.identify(234, {
+            			firstName: "Jason", 
+				gender: "m",
+				age: 21
+			});
+			
+			analytics.identify(235, {
+            			firstName: "Martin", 
+				gender: "m",
+				age: 18
+			});
+			
+			analytics.identify(236, {
+            			firstName: "Craig", 
+				gender: "m",
+				age: 53
+			});
+			
+			analytics.identify(456, {
+            			firstName: "Gina", 
+				gender: "f",
+				age: 21
+			});
+			
+			analytics.identify(457, {
+            			firstName: "Mina", 
+				gender: "f",
+				age: 22
+			});
+			
+			analytics.identify(458, {
+            			firstName: "Julie", 
+				gender: "f",
+				age: 43
+			});
+			
+			analytics.identify(459, {
+            			firstName: "Tina", 
+				gender: "f",
+				age: 21
+			});
+			
+			analytics.identify(460, {
+            			firstName: "Melissa", 
+				gender: "f",
+				age: 18
+			});
+			
+			analytics.identify(461, {
+            			firstName: "Heather", 
+				gender: "f",
+				age: 53
+			});
+			
 		}
 	</script>   
 </body> 
