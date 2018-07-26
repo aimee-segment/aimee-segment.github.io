@@ -2,7 +2,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
 	<!-- OptimizelyX Code -->
-	<script src="https://cdn.optimizely.com/json/11085953018.json"></script>
+	<script 
+		var optimizelyClientInstance;
+		var url = 'hhttps://cdn.optimizely.com/json/11085953018.json';
+		window.fetch(url, { mode: 'cors' })
+		  .then((response) => response.json())
+		  .then((datafile) => {
+		    optimizelyClientInstance = optimizely.createInstance({ datafile: datafile })
+		  });	
+	</script>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>Questionnaire</title> 
         <meta name="keywords" content="" />
