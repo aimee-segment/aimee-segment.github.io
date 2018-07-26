@@ -9,7 +9,7 @@
 		  .then((response) => response.json())
 		  .then((datafile) => {
 		    optimizelyClientInstance = optimizely.createInstance({ datafile: datafile })
-		  });	
+		  });
 	</script>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>Questionnaire</title> 
@@ -136,72 +136,8 @@
 				gender: "m",
 				age: 21
 			});
-			
-			analytics.identify(124, {
-            			firstName: "Martin", 
-				gender: "m",
-				age: 22
-			});
-			
-			analytics.identify(125, {
-            			firstName: "Craig", 
-				gender: "m",
-				age: 43
-			});
-			
-			analytics.identify(234, {
-            			firstName: "Jason", 
-				gender: "m",
-				age: 21
-			});
-			
-			analytics.identify(235, {
-            			firstName: "Martin", 
-				gender: "m",
-				age: 18
-			});
-			
-			analytics.identify(236, {
-            			firstName: "Craig", 
-				gender: "m",
-				age: 53
-			});
-			
-			analytics.identify(456, {
-            			firstName: "Gina", 
-				gender: "f",
-				age: 21
-			});
-			
-			analytics.identify(457, {
-            			firstName: "Mina", 
-				gender: "f",
-				age: 22
-			});
-			
-			analytics.identify(458, {
-            			firstName: "Julie", 
-				gender: "f",
-				age: 43
-			});
-			
-			analytics.identify(459, {
-            			firstName: "Tina", 
-				gender: "f",
-				age: 21
-			});
-			
-			analytics.identify(460, {
-            			firstName: "Melissa", 
-				gender: "f",
-				age: 18
-			});
-			
-			analytics.identify(461, {
-            			firstName: "Heather", 
-				gender: "f",
-				age: 53
-			});
+			var anonId = analytics.user().anonymousId();
+			var variation1 = optimizelyClientInstance.activate('QuestTest', anonId);
 			
 		}
 	</script>   
