@@ -3,12 +3,11 @@
     <head>
 	<!-- OptimizelyX Code -->
 	<script> 
-		var optimizelyClientInstance;
 		var url = 'https://cdn.optimizely.com/json/11085953018.json';
 		window.fetch(url, { mode: 'cors' })
 		  .then((response) => response.json())
 		  .then((datafile) => {
-		  optimizelyClientInstance = optimizely.createInstance({ datafile: datafile })
+		  var optimizelyClientInstance = optimizely.createInstance({ datafile: datafile })
 		  });
 		
 		//Segment Code
