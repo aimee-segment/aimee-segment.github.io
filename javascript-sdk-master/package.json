@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "version": "1.0.0",
+  "name": "optimizely-sdk-packages",
+  "scripts": {
+    "postinstall": "lerna bootstrap",
+    "clean": "lerna run clean",
+    "publish": "lerna publish",
+    "test": "lerna run test --stream",
+    "test-xbrowser": "lerna run test-xbrowser --stream"
+  },
+  "devDependencies": {
+    "lerna": "^2.9.0"
+  }
+}
