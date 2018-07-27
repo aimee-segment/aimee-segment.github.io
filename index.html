@@ -18,8 +18,19 @@
   		}}();
 		
 		var anonId = analytics.user().anonymousId();
-		var variation1 = optimizelyClientInstance.activate('QuestTest', anonId);
-	</script>
+		var variation1 = optimizelyClientInstance.activate("my_experiment", anonId);
+		console.log(variation1);
+		var variation2 = optimizelyClientInstance.activate('my_experiment', userId);
+		console.log(variation2);
+
+		
+		if (variation === 'original') {
+  			analytics.track('Experiment Viewed');
+		} else
+			analytics.track('Experiment Viewed');
+		}
+	
+	    </script>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>Questionnaire</title> 
         <meta name="keywords" content="" />
