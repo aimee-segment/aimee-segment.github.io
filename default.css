@@ -7,10 +7,10 @@
 	{
 		margin: 0px;
 		padding: 0px;
-		background: #334467;
+		background: #e2e5ec;
 		font-family: 'Questrial', sans-serif;
-		font-size: 12pt;
-		color: #E5EEFF;
+		font-size: 11pt;
+		color: #ffffff;
 	}
 	
 	
@@ -255,27 +255,14 @@
 	.button
 	{
 		display: inline-block;
-		margin-top: 2em;
-		padding: 0.8em 2em;
-		background: #3E5A99;
-		line-height: 1.8em;
+		margin-top: 1em;
+		padding: 0.8em 1em;
+		background: #404042;
+		line-height: 1.5em;
 		letter-spacing: 1px;
 		text-decoration: none;
 		font-size: 1em;
 		color: #FFF;
-	}
-	
-	.button:before
-	{
-		display: inline-block;
-		background: #8DCB89;
-		margin-right: 1em;
-		width: 40px;
-		height: 40px;
-		line-height: 40px;
-		border-radius: 20px;
-		text-align: left;
-		color: #272925;
 	}
 	
 	.button-small
