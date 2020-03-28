@@ -10,7 +10,7 @@
 	       }}();
 	</script>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>Questionnaire</title> 
+        <title>Questionnaire Page</title> 
         <meta name="keywords" content="" />
         <meta name="description" content="" />
         <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Quicksand:400,700|Questrial" rel="stylesheet" />
@@ -24,14 +24,14 @@
         <div id="header-wrapper">
             <div id="header" class="container">
                 <div id="logo">
-                    <h2><a href="#">Test Site</a></h2>
+                    <h2><a href="#">Segment Test Site</a></h2>
                 </div>
             </div>
         </div>
         <div id="page-wrapper">
             <div id="welcome" class="container">
                 <form name="travel" class="form label" onsubmit="identify(event)">
-                    Destination: <input name="destination" class="form input.text" required="" size="81" type="text"/> 
+                    Desired Travel Destination: <input name="destination" class="form input.text" required="" size="81" type="text"/> 
                     <br><br>
                     Name: <input name="name" required="" size="75" type="text"/> 
                     <br><br> 
@@ -45,9 +45,7 @@
 		<form name="travel2" class="form label" onsubmit="track(event)">
 			Name: <input name="name" required="" size="75" type="text"/> 
                     	<br><br> 
-                    	Age: <input name="age" required="" size="75" type="number"/> 
-                    	<br><br>
-			Gender: <input name="gender" required="" size="75" type="text"/> 
+                    	Company: <input name="company" required="" size="75" type="text"/> 
                     	<br><br>
                 	<input name="submit" class="button button-small" type="submit" value="submit"/>
 		</form>
@@ -64,21 +62,15 @@
         		var user = {
             			email: email,
             			name: name,
-            			destination: destination,
-            			details: details
+            			destination: destination
         		};
 
-        		analytics.identify(1233456, {
+        		analytics.identify({
             			email: email, 
             			name: name
-        		}, {
-            			'integrations': {
-                		'Salesforce': true,
-                		'Klaviyo': true
-            			}
-			});
+        		});
 
-        		analytics.track('Destination Submitted', user, function() {
+        		analytics.track('Destination Inquired', user, function() {
             			window.location.href = "";
         		});
     		}
@@ -87,18 +79,19 @@
         		e.preventDefault();
         		var form = e.target;
         		var name = form["name"].value;
-        		var age = form["age"].value;
-        		var gender = form["gender"].value;
+			var company = form["company"].value;
         		var user = {
             			name: name,
-            			age: age,
-            			gender: gender
+            			company: company
         		};
+			
+			var today = new Date();
+			var date = today.getFullYear()+(today.getMonth()+1)+today.getDate();
+			var time = today.getHours()+today.getMinutes()+today.getSeconds();
+			var dateTime = date+time;
 
-        		analytics.identify(13444, {
-            			firstName: "Jason", 
-				lastName: "Martin",
-				gender: gender
+        		analytics.identify(dateTime, {
+            			name: name
 			});
 
         		analytics.track('Signed Up', user, function() {
@@ -108,8 +101,7 @@
     
     		function myFunction() {
         		analytics.track('Form Submitted', {
-            			form_name: "About Me",
-				revenue: 50
+            			form_name: "Travel Inquiry"
     			});
 		}
 		
