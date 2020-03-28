@@ -30,7 +30,7 @@
         </div>
         <div id="page-wrapper">
             <div id="welcome" class="container">
-                <form name="travel" class="form label" action="#" onclick="identify(event);return false">
+                <form name="travel" class="form label" action="#" onsubmit="identify(event);return false">
                     Name: <br><input name="name" required="" size="80" type="text"/> 
                     <br><br> 
                     Email: <br><input name="email" required="" size="80" type="email"/> 
@@ -38,7 +38,7 @@
 	            Desired Travel Destination: <br>
 	            <input name="destination" class="form input.text" required="" size="80" type="text"/> 
                     <br><br>
-                    <input name="submit" class="button button-small" type="button" value="submit"/>
+                    <input name="submit" class="button button-small" type="submit" value="submit"/>
 
                 </form>
 		<br><br><br><br>
@@ -75,6 +75,7 @@
         		analytics.track('Destination Inquired', user, function() {
             			window.location.href = "";
         		});
+			e.preventDefault();
     		}
 		
 		function track(e){
@@ -99,6 +100,7 @@
         		analytics.track('Signed Up', user, function() {
             			window.location.href = "";
         		});
+			e.preventDefault();
     		}
     
     		function myFunction() {
