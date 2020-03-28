@@ -232,7 +232,7 @@
 	
 	ul.contact li a
 	{
-		color: #FFF;
+		color: #606060;
 	}
 	
 	ul.contact li a:before
@@ -261,7 +261,7 @@
 		letter-spacing: 1px;
 		text-decoration: none;
 		font-size: 1em;
-		color: #FFF;
+		color: #606060;
 	}
 	
 	.button-small
@@ -280,7 +280,7 @@
 	.title h2
 	{
 		font-size: 2.8em;
-		color: #FFF;
+		color: #606060;
 	}
 	
 	.title .byline
@@ -370,7 +370,7 @@
 		font-weight: 600;
 		text-transform: uppercase;
 		outline: 0;
-		color: #FFF;
+		color: #606060;
 	}
 	
 	#menu li:hover a, #menu li.active a, #menu li.active span
@@ -380,7 +380,7 @@
 	
 	#menu .current_page_item a
 	{
-		color: #FFF;
+		color: #606060;
 	}
 	
 
@@ -449,7 +449,7 @@
 
 	#welcome .title h2
 	{
-		color: #FFF;
+		color: #606060;
 	}
 	
 	#welcome a,
