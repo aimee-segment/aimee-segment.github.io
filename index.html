@@ -31,23 +31,25 @@
         <div id="page-wrapper">
             <div id="welcome" class="container">
                 <form name="travel" class="form label" onsubmit="identify(event)">
-                    Desired Travel Destination: <input name="destination" class="form input.text" required="" size="81" type="text"/> 
-                    <br><br>
-                    Name: <input name="name" required="" size="75" type="text"/> 
+                    Name: <br><input name="name" required="" size="75" type="text"/> 
                     <br><br> 
-                    Email: <input name="email" required="" size="75" type="email"/> 
+                    Email: <br><input name="email" required="" size="75" type="email"/> 
+                    <br><br>
+	            Desired Travel Destination: <br>
+	            <input name="destination" class="form input.text" required="" size="81" type="text"/> 
                     <br><br>
                     <input name="submit" class="button button-small" type="submit" value="submit"/>
-                    <br><br>
-                    <button class="button button-small" onclick="myFunction()">Track Event</button>
+
                 </form>
-		<br><br>
+		<br><br><br><br>
 		<form name="travel2" class="form label" onsubmit="track(event)">
-			Name: <input name="name" required="" size="75" type="text"/> 
+			Name: <br><input name="name" required="" size="75" type="text"/> 
                     	<br><br> 
-                    	Company: <input name="company" required="" size="75" type="text"/> 
-                    	<br><br>
+                    	Company: <br><input name="company" required="" size="75" type="text"/> 
+                    	<br><br><br><br>
                 	<input name="submit" class="button button-small" type="submit" value="submit"/>
+			<br><br><br><br>
+			<button class="button button-small" onclick="myFunction()">Track Event</button>
 		</form>
 		    <button class="button button-small" onclick="myFunction2()">Identify</button>
             </div>
