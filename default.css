@@ -266,6 +266,15 @@
 	
 	.button-small
 	{
+		display: inline-block;
+		margin-top: 1em;
+		padding: 0.5em 0.5em;
+		background: #404042;
+		line-height: 1.5em;
+		letter-spacing: 1px;
+		text-decoration: none;
+		font-size: 1em;
+		color: #FFFFFF;
 	}
 		
 /*********************************************************************************/
