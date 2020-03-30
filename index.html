@@ -49,9 +49,9 @@
                     	<br><br>
                 	<input name="submit" class="button button-small" type="submit" value="submit"/>
 			<br><br><br><br>
-			<button class="button button-small" onclick="myFunction()">Track Event</button>
+			<button class="button button-small" onclick="myFunction(e)">Track Event</button>
 		</form>
-		    <button class="button button-small" onclick="myFunction2()">Identify</button>
+		    <button class="button button-small" onclick="myFunction2(e)">Identify</button>
             </div>
         </div>
 	<script type="text/javascript">
@@ -101,13 +101,15 @@
         		});
     		}
     
-    		function myFunction() {
+    		function myFunction(e) {
+			e.preventDefault();
         		analytics.track('Form Submitted', {
             			form_name: "Travel Inquiry"
     			});
 		}
 		
-    		function myFunction2() {
+    		function myFunction2(e) {
+			e.preventDefault();
         		var userId = '023bkj2131kj2h3125';
 			analytics.identify(userId, {
 				email: 'steve@segment.com'
