@@ -47,7 +47,7 @@
                     	<br><br> 
                     	Company: <br><input name="company" size="75" type="text"/> 
                     	<br><br>
-                	<input name="submit" class="button button-small" type="submit" value="submit"/>
+                	<input name="submit" class="button button-small" type="submit" id="submit" value="submit"/>
 			<br><br><br><br>
 			<button class="button button-small" type="button" onclick="myFunction(); return false">Track Event</button>
 		</form>
@@ -79,7 +79,8 @@
 		
 		function track(e){
         		e.preventDefault();
-        		var form = e.target;
+        		var submitType = document.getElementById("submit");
+			var form = e.target;
         		var name = form["name"].value;
 			var company = form["company"].value;
         		var user = {
@@ -98,6 +99,10 @@
 
         		analytics.track('Signed Up', user, function() {
             			window.location.href = "";
+        		});
+			
+			analytics.track('Form Submitted', {
+				submissionType: submitType
         		});
     		}
     
