@@ -119,6 +119,39 @@
 			},function(){window.appboy.changeUser(userId);});
 			
 		}
-	</script>   
+	</script>
+	    <script>window.consentManagerConfig = function(exports) {
+  var React = exports.React
+  var bannerContent = ' ' //- requires a non-empty string to load.
+  var preferencesDialogTitle = 'Cookie Preferences'
+  var preferencesDialogContent = 'We use data collected by cookies and JavaScript libraries to improve the functionality of the Webflow Dashboard, deliver personalized advertisements, and increase the overall performance of our service.'
+  var cancelDialogTitle = 'Are you sure you want to cancel?'
+  var cancelDialogContent = React.createElement(
+    'span',
+    null,
+    'Your preferences have not been saved. By continuing to use our website, you՚re agreeing to our',
+    ' ',
+    React.createElement(
+      'a',
+      {href: '/legal/cookie-policy', target: '_blank'},
+      'Cookie Policy'
+    ),
+    '.'
+  )
+  var defaultDestinationBehavior = 'imply'
+
+  return {
+    container: '#consent-container',
+    writeKey: 'K04qOslQsPu3fLgUGy8Yv3PE9QOnGMQh',
+    shouldRequireConsent: function () { return false; },
+    bannerContent: bannerContent,
+    preferencesDialogTitle: preferencesDialogTitle,
+    preferencesDialogContent: preferencesDialogContent,
+    cancelDialogTitle: cancelDialogTitle,
+    cancelDialogContent: cancelDialogContent,
+    defaultDestinationBehavior: defaultDestinationBehavior
+  }
+}
+</script><script src="https://unpkg.com/@segment/consent-manager@1.1.0/standalone/consent-manager.js" crossorigin="anonymous" defer="defer"></script><div id="consent-container"></div></body></html>
 </body> 
 </html>
